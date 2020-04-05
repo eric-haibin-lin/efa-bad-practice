@@ -27,7 +27,7 @@ int EFAEndpoint::init_res() {
   // get provider
   hints->ep_attr->type = FI_EP_RDM;
   hints->fabric_attr->prov_name = strdup(provider.c_str());
-  err = fi_getinfo(FI_VERSION(1, 9), NULL, NULL, 0, hints, &fi);
+  err = fi_getinfo(FI_VERSION(1, 8), NULL, NULL, 0, hints, &fi);
   if (err < 0)
     std::cerr << "fi_getinfo err " << err << "\n";
 
